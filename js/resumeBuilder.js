@@ -19,7 +19,7 @@ var bio = {
 	]
 }
 
-//Function to display bio object information in index.html
+//Function to display bio object information in index.html called at end of file
 bio.display = function() {
 	//Using prepend to add name and role to header
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -65,33 +65,83 @@ bio.display = function() {
 	}
 }
 
+//Object to store educations and online courses
 var education = {
 	"schools":[
 			{
 				"name": "Chemeketa Community College",
 				"location": "Salem, OR",
-				"degree": "Associates",
-				"majors": ["Transfer"],
-				"date": 2005,
-				"url": "http://example.com"
+				"degree": "Associate of Arts",
+				"majors": ["Oregon Transfer Degree"],
+				"dates": "2005 - 2006",
+				"url": "http://www.chemeketa.edu/"
 			},
 			{
 				"name": "Udacity",
 				"location": "Online",
 				"degree": "Nanodegree",
 				"majors": ["Frontend Web Developer"],
-				"date": 2014,
+				"dates": "2014",
 				"url": "http://udacity.com"
 			}
 	],
 	"onlineCourses":[
 			{
-			"title": "Javascript Syntax",
+			"title": "Javascript Basics",
 			"school": "Udacity",
 			"date": 2014,
 			"url": "http://www.udacity.com/course/ud804"
+			},
+			{
+			"title": "Intro to HTML and CSS",
+			"school": "Udacity",
+			"date": 2014,
+			"url": "http://www.udacity.com/course/ud304"
+			},
+			{
+			"title": "How to Use Git and GitHub",
+			"school": "Udacity",
+			"date": 2014,
+			"url": "http://www.udacity.com/course/ud775"
 			}
 	]
+}
+
+//Function to display education object information in index.html called at end of file
+education.display = function() {
+	$("#education").append(HTMLschoolLists);
+	for (school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
+			formattedSchoolName = formattedSchoolName.replace("%url%", education.schools[school].url);
+			var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+			var formattedSchoolNameDegree = formattedSchoolName + formattedDegree;
+			var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+			var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+			var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+
+			$(".education-entry:last").append(formattedSchoolNameDegree);
+			$(".education-entry:last").append(formattedSchoolDates);
+			$(".education-entry:last").append(formattedSchoolLocation);
+			$(".education-entry:last").append(formattedSchoolMajor);
+	}
+
+	$("#education").append(HTMLonlineClasses);
+	for (course in education.onlineCourses) {
+		$("#education").append(HTMLonlineStart);
+			var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+			formattedOnlineTitle = formattedOnlineTitle.replace("%url%", education.onlineCourses[course].url);
+			var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+			var formattedOnlineTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
+			var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
+			var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+			formattedOnlineURL = formattedOnlineURL.replace("%data%", education.onlineCourses[course].url);
+
+
+			$(".online-course:last").append(formattedOnlineTitleSchool);
+			$(".online-course:last").append(formattedOnlineDates);
+			$(".online-course:last").append(formattedOnlineURL);
+	}	
 }
 
 var work = {
@@ -134,3 +184,4 @@ var project = {
 }
 
 bio.display();
+education.display();
