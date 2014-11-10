@@ -53,7 +53,7 @@ var HTMLschoolMajor = "<em><br>Major: %data%</em>"
 
 var HTMLonlineClasses = "<h3>Online Education</h3>";
 var HTMLonlineStart = "<div class='online-course'></div>";
-var HTMLonlineTitle = "<a href='%url%'>%data%";
+var HTMLonlineTitle = "<a href='%url%' class='online-title'>%data%";
 var HTMLonlineSchool = " -- %data%</a>";
 var HTMLonlineDates = "<div class='date-text'>%data%</div>";
 var HTMLonlineURL = "<br><a href='%url%'>%data%</a>";

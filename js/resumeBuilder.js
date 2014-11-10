@@ -1,4 +1,4 @@
-//Code will be commented to much as I learn and think through this exercise.  Comments will be minimized at a later date
+//Code will be commented as I learn and think through this exercise.  Comments will be minimized at a later date
 
 // Object to store bio info
 var bio = {
@@ -78,7 +78,7 @@ var education = {
 			},
 			{
 				"name": "Udacity",
-				"location": "Online",
+				"location": "Albany, OR",
 				"degree": "Nanodegree",
 				"majors": ["Frontend Web Developer"],
 				"dates": "2014",
