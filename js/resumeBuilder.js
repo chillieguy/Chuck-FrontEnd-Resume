@@ -12,8 +12,8 @@ var bio = {
 		"linkdin": "ceheunderwood",
 		"location": "Albany, OR"
 	},
-	"bioPic": "images/profile.jpg",
-	"welcomeMessage": "This is my resume.",
+	"bioPic": "images/profile.JPG",
+	"welcomeMessage": "This is my resume.  Created in code using Javascript.",
 	"skills": [
 		"HTML", "CSS", "Javascript", "Awesomeness"
 	]
@@ -152,15 +152,15 @@ var work = {
 			"title": "Store Manager",
 			"location": "Corvallis, OR",
 			"dates": "January 2010 to present",
-			"description": "Ran a multimillion dollar store",
+			"description": "Leader of a multimillion dollar sales location.  Responsible for maintaining customer experience, sales and operational integrity of the location.",
 			"url": "http://www.att.com"
 		},
 		{
 			"employer": "Lowes HIW",
-			"title": "Operations Manager",
+			"title": "Operations/Administrative Manager",
 			"location": "Redmond, OR",
 			"dates": "March 2005 to November 2009",
-			"description": "Responsible for the operational integrity of the store",
+			"description": "Responsible for the operation integrity of a 100,000+ square foot location.  Directly responsible for the cash office, receiving, delivery, freight crew and product servive team.",
 			"url": "http://www.lowes.com"
 		}
 	]
@@ -186,27 +186,49 @@ work.display = function() {
 }
 
 //Fill in highlighted projects
-var project = {
-	"projects": [
+var projects = {
+	"project": [
 		{
-			"title": "Project 1",
+			"title": "Project 1 - Project Portfolio",
 			"dates": "September 2014",
-			"description": "Project Portfolio",
+			"description": "Project was in introduction to using HTML and CSS to create a webpage layout.  Bootstrap was also introduced to help with the page layout",
+			"url": "http://chillieguy.github.io/Chuck-Portfolio",
 			"images": [
-				"http://placehold.it/35", "http://placehold.it/35"
+				"http://placehold.it/35/FF8000", "http://placehold.it/35"
 			]
 		},
 		{
-			"title": "Project 2",
+			"title": "Project 2 - Resume",
 			"dates": "October 2014",
-			"description": "Interactive Resume",
+			"description": "Project was an introduction to Javascript.  I created a resume by injecting HTML in a file with Javascript and the help of a premade file that had html templates.",
+			"url": "http://chillieguy.github.io/Chuck-FrontEnd-Resume",
 			"images": [
-				"http://placehold.it/35", "http://placehold.it/35"
+				"http://placehold.it/35", "http://placehold.it/35/FF8000"
 			]
 		}
 	]
 }
 
+projects.display = function() {
+	$("#projects").append(HTMLprojectStart);
+	for (proj in projects.project) {
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.project[proj].title);
+		formattedTitle = formattedTitle.replace("%url%", projects.project[proj].url);    
+    var formattedDates = HTMLprojectDates.replace("%data%", projects.project[proj].dates);	
+    var formattedDescription = HTMLprojectDescription.replace("%data%", projects.project[proj].description);
+
+		$(".project-entry:last").append(formattedTitle);
+  	$(".project-entry:last").append(formattedDates);
+  	$(".project-entry:last").append(formattedDescription);
+
+  	for (image in projects.project[proj].images) {
+  	var formattedImage = HTMLprojectImage.replace("%data%",projects.project[proj].images[image]);
+    $(".project-entry:last").append(formattedImage);
+		}
+  }
+}
+
 bio.display();
 work.display();
+projects.display();
 education.display();
