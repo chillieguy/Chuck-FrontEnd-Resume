@@ -135,7 +135,7 @@ education.display = function() {
 			var formattedOnlineTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
 			var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
 			var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-			formattedOnlineURL = formattedOnlineURL.replace("%data%", education.onlineCourses[course].url);
+			formattedOnlineURL = formattedOnlineURL.replace("%url%", education.onlineCourses[course].url);
 
 
 			$(".online-course:last").append(formattedOnlineTitleSchool);
@@ -144,21 +144,45 @@ education.display = function() {
 	}	
 }
 
+//Object to store work experience
 var work = {
 	"jobs": [
 		{
 			"employer": "AT&T Mobility",
 			"title": "Store Manager",
+			"location": "Corvallis, OR",
 			"dates": "January 2010 to present",
-			"description": "Ran a multimillion dollar store"
+			"description": "Ran a multimillion dollar store",
+			"url": "http://www.att.com"
 		},
 		{
 			"employer": "Lowes HIW",
 			"title": "Operations Manager",
+			"location": "Redmond, OR",
 			"dates": "March 2005 to November 2009",
-			"description": "Responsible for the all operational integrity of the store"
+			"description": "Responsible for the operational integrity of the store",
+			"url": "http://www.lowes.com"
 		}
 	]
+}
+
+//Function to display work experience
+work.display = function() {
+	$("#workExperience").append(HTMLworkStart);
+	for (job in work.jobs) {
+		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		formattedWorkEmployer = formattedWorkEmployer.replace("%url%", work.jobs[job].url);
+		var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedEmployerTitle = formattedWorkEmployer + formattedWorkTitle;
+		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+		$(".work-entry:last").append(formattedEmployerTitle);
+		$(".work-entry:last").append(formattedWorkDates);
+		$(".work-entry:last").append(formattedWorkLocation);
+		$(".work-entry:last").append(formattedWorkDescription);
+	}
 }
 
 //Fill in highlighted projects
@@ -184,4 +208,5 @@ var project = {
 }
 
 bio.display();
+work.display();
 education.display();
