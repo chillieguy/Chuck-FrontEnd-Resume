@@ -12,7 +12,7 @@ var bio = {
 		"linkdin": "ceheunderwood",
 		"location": "Albany, OR"
 	},
-	"bioPic": "images/profile.JPG",
+	"bioPic": "images/profile.png",
 	"welcomeMessage": "This is my resume.  Created in code using Javascript.",
 	"skills": [
 		"HTML", "CSS", "Javascript", "Awesomeness"
