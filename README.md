@@ -8,6 +8,6 @@ Direct link to gh-pages for [Chuck Resume](http://chillieguy.github.io/Chuck-Fro
 This was a project that required me to use helper code to create a resume using only javascript and json.  This project started out frustrating as I tried to get the code to display what I wanted, but became much easier as I figured out how to use helper.js.
 
 **TO DO**
-*Add customer styling/CSS
-*Add additional work experience
-*Add links to social networks
+*Add customer styling/CSS  
+*Add additional work experience  
+*Add links to social networks  
