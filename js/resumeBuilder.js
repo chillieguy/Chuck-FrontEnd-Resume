@@ -205,6 +205,15 @@ var projects = {
 			"images": [
 				"http://placehold.it/35", "http://placehold.it/35/FF8000"
 			]
+		},
+		{
+			"title": "Project 3 - Classic Arcade Game Clone",
+			"dates": "December 2014",
+			"description": "Introduction to Object Oriented Javascript and HTML5 Canvas by creating a clone of the classic arcade game Frogger.",
+			"url": "#",
+			"images": [
+				"http://placehold.it/35/FF8000", "http://placehold.it/35"
+			]
 		}
 	]
 }
