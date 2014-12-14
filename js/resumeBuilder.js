@@ -233,4 +233,5 @@ work.display();
 projects.display();
 education.display();
 
-$("#mapDiv").append(googleMap);
+// Remove map till I decide I need it
+//$("#mapDiv").append(googleMap);
