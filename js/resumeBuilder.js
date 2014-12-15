@@ -103,6 +103,12 @@ var education = {
 			"school": "Udacity",
 			"date": 2014,
 			"url": "http://www.udacity.com/course/ud775"
+			},
+			{
+			"title": "Make Your Own 2048",
+			"school": "Udacity",
+			"date": 2014,
+			"url": "https://www.udacity.com/course/ud248"
 			}
 	]
 }
@@ -218,6 +224,7 @@ var projects = {
 	]
 }
 
+// Function to display projects
 projects.display = function() {
 	$("#projects").append(HTMLprojectStart);
 	for (proj in projects.project) {
@@ -237,6 +244,7 @@ projects.display = function() {
   }
 }
 
+//Calling each display function
 bio.display();
 work.display();
 projects.display();
