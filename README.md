@@ -11,3 +11,4 @@ This was a project that required me to use helper code to create a resume using 
 *Add custom styling/CSS  
 *Add additional work experience  
 *Add links to social networks  
+*Realized that it looks terrible on mobile.
