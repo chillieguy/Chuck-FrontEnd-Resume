@@ -105,6 +105,18 @@ var education = {
 			"url": "http://www.udacity.com/course/ud775"
 			},
 			{
+			"title": "Website Performance Optimization",
+			"school": "Udacity",
+			"date": 2015,
+			"url": "http://www.udacity.com/course/ud884"
+			},
+			{
+			"title": "Object-Oriented JavaScript",
+			"school": "Udacity",
+			"date": 2015,
+			"url": "http://www.udacity.com/course/ud015"
+			},
+			{
 			"title": "Make Your Own 2048",
 			"school": "Udacity",
 			"date": 2014,
