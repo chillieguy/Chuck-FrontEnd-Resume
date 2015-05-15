@@ -180,6 +180,14 @@ var work = {
 			"dates": "March 2005 to November 2009",
 			"description": "Responsible for the operation integrity of a 100,000+ square foot location.  Directly responsible for the cash office, receiving, delivery, freight crew and product servive team.",
 			"url": "http://www.lowes.com"
+		},
+		{
+			"employer": "Meier and Frank",
+			"title": "Area Sales Manager",
+			"location": "Salt Lake City, UT",
+			"dates": "April 1995 to November 2004",
+			"description": "Managed teams of up to 35 to exceed sales targets while ensuring a first classs customer experience in store.",
+			"url": "#"
 		}
 	]
 }
