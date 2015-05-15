@@ -236,7 +236,16 @@ var projects = {
 			"title": "Project 3 - Classic Arcade Game Clone",
 			"dates": "December 2014",
 			"description": "Introduction to Object Oriented Javascript and HTML5 Canvas by creating a clone of the classic arcade game Frogger.",
-			"url": "#",
+			"url": "http://chillieguy.github.io/Chuck-Classic-Arcade-Clone",
+			"images": [
+				"http://placehold.it/35/FF8000", "http://placehold.it/35"
+			]
+		},
+		{
+			"title": "Project 4 - Website Optimization",
+			"dates": "January 2015",
+			"description": "Optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second",
+			"url": "http://chillieguy.github.io/Chuck-Frontend-Nanodegree-Mobile-Portfolio/",
 			"images": [
 				"http://placehold.it/35/FF8000", "http://placehold.it/35"
 			]
