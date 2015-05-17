@@ -245,7 +245,16 @@ var projects = {
 			"title": "Project 4 - Website Optimization",
 			"dates": "January 2015",
 			"description": "Optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second",
-			"url": "http://chillieguy.github.io/Chuck-Frontend-Nanodegree-Mobile-Portfolio/",
+			"url": "http://chillieguy.github.io/Chuck-Frontend-Nanodegree-Mobile-Portfolio",
+			"images": [
+				"http://placehold.it/35/FF8000", "http://placehold.it/35"
+			]
+		},
+		{
+			"title": "Project 5 - Website Optimization",
+			"dates": "April 2015",
+			"description": "Develop a single page website and add additional functionality to this application, including: map markers to identify popular locations or places you’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations.",
+			"url": "http://chillieguy.github.io/Chuck-Frontend-Neighborhood-Map",
 			"images": [
 				"http://placehold.it/35/FF8000", "http://placehold.it/35"
 			]
